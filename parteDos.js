@@ -225,3 +225,109 @@ if (numRep >= 0 && numRep <=50) {
     alert("El número introducido no es válido");
 }
 
+//8- Crea script para generar pirámide siguiente con los números del 1 al número que indique el usuario (no mayor de 50) 
+/*
+1
+12
+123
+1234
+12345
+123456
+……
+*/
+let numRepe = parseInt(prompt("Ingrese un numero hasta el 50"))
+
+if (numRepe >= 0 && numRepe <= 50) {
+    let i = "";
+    let re = "";
+    for (let i = 1; i <= numRepe; i++) {
+      for (let re = 1; re <= i; re++) {
+        document.write(i);
+        
+      }
+        document.write("<br>");
+    }
+}else{
+    alert("ingrese solo numeros")
+}
+
+
+
+//9- Crea un script que escriba los números del 1 al 500, que indique cuáles son múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal. Por ejemplo :
+/*
+1
+2
+3
+4 (Múltiplo de 4)
+5-
+————————————————————-
+
+6
+7
+8 (Múltiplo de 4)
+9 (Múltiplo de 9)
+10
+
+*/
+
+for (let h = 1; h<=500; h++) {
+    document.write(h);
+  
+    if(h % 4 == 0){
+    document.write("multiplo de 4");
+    }
+    if (h % 9 == 0) {
+    document.write("multiplo de 9");    
+    }
+    document.write("<br>");
+    if (h % 5 == 0) {
+    document.write("<hr>");    
+    }
+}
+
+//10- Realiza un script que pida número de filas y columnas y escriba una tabla. Dentro de cada una de las celdas deberá escribirse un número consecutivo en orden descendente. Si, por ejemplo, la tabla es de 7×5 los números irán del 35 al 1.
+
+//Ejercicios con Math
+let z = "";
+let j = "";
+let fila = prompt("ingrese la filas");
+let col = prompt("ingrese las columnas");
+let result = fila * col ;
+document.write("<table border");
+
+for (let z = 0; z < fila; z++) {
+    document.write("<tr>");
+    for (let j = 0; j < col; j++) {
+        document.write("<td>");
+        document.write(result);
+        
+        result--;
+        
+        document.write("</td>"); 
+    }
+    document.write("</tr>");
+}
+
+document.write("</table>");
+
+//11- Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor. *
+
+//Nota: ver funcion Math() https://www.w3schools.com/js/js_math.asp
+
+
+//12- Realiza un script que genere un número aleatorio entre 1 y 99
+
+//Ejercicios con String
+
+
+
+//13- Realiza un script que pida un texto y lo muestre en mayúsculas.
+
+//14- Realiza un script que pida una cadena de texto y lo muestre poniendo el signo – entre cada carácter sin usar el método replace. Por ejemplo, si tecleo “hola qué tal”, deberá salir “h-o-l-a- -q-u-e- -t-a-l”.
+
+//15- Realiza un script que cuente el número de vocales que tiene un texto.
+
+//16- Realiza un script que pida una cadena de texto y la devuelva al revés. Es decir, si tecleo “hola que tal” deberá mostrar “lat euq aloh”.
+
+//17- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado.
+
