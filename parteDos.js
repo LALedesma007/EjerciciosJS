@@ -285,7 +285,8 @@ for (let h = 1; h<=500; h++) {
     }
 }
 
-//10- Realiza un script que pida número de filas y columnas y escriba una tabla. Dentro de cada una de las celdas deberá escribirse un número consecutivo en orden descendente. Si, por ejemplo, la tabla es de 7×5 los números irán del 35 al 1.
+//10- Realiza un script que pida número de filas y columnas y escriba una tabla. Dentro de cada una de las celdas deberá escribirse un número consecutivo en orden descendente. Si,
+// por ejemplo, la tabla es de 7×5 los números irán del 35 al 1.
 
 //Ejercicios con Math
 let z = "";
@@ -315,19 +316,81 @@ document.write("</table>");
 //Nota: ver funcion Math() https://www.w3schools.com/js/js_math.asp
 
 
+let edad1 = parseInt(prompt("Ingrese la primera edad"));
+let edad2 = parseInt(prompt("Ingrese la segunda edad"));
+let edad3 = parseInt(prompt("Ingrese la tercera edad"));
+let nombre1 = prompt("Ingrese el primer nombre");
+let nombre2 = prompt("Ingrese el segundo nombre");
+let nombre3 = prompt("Ingrese el tercer nombre");
+
+if (edad1 > edad2 && edad1 > edad3) {
+    document.write("El mayor es:" + nombre1);
+    
+}else if (edad2 > edad3) {
+    document.write("El mayor es:" + nombre2);
+}else{
+    document.write("El mayor es:" + nombre3);
+}
+
+
 //12- Realiza un script que genere un número aleatorio entre 1 y 99
 
-//Ejercicios con String
+for (let i = 1; i <=99; i++) {
+    
+    document.write(parseInt(Math.random(i)*100))
+}
 
 
 
 //13- Realiza un script que pida un texto y lo muestre en mayúsculas.
 
+let texto = prompt("Ingrese un texto");
+let converMayuscula = texto.toLocaleUpperCase();
+document.write(converMayuscula);
+let converMinscula = texto.toLocaleLowerCase();
+document.write(converMinscula);
+
 //14- Realiza un script que pida una cadena de texto y lo muestre poniendo el signo – entre cada carácter sin usar el método replace. Por ejemplo, si tecleo “hola qué tal”, deberá salir “h-o-l-a- -q-u-e- -t-a-l”.
+
+let cadTexto = prompt("Ingrese un texto");
+let caracter = ("");
+for (let i = 0; i < cadTexto.length; i++) {
+   caracter = cadTexto.charAt(i)
+   if (i == cadTexto - 1) {
+    document.write(caracter);
+   }else{
+    document.write(caracter + ("-"));
+   }
+    
+}
+
 
 //15- Realiza un script que cuente el número de vocales que tiene un texto.
 
+let frase = prompt("Ingrese una frase");
+    cont = 0;
+for (let i = 0; i < frase.length; i++) {
+    if ((frase.charAt(i) == "a") || (frase.charAt(i) == "e") || (frase.charAt(i) == "i") || (frase.charAt(i) == "o") || (frase.charAt(i) == "u")) {
+        cont++;
+    }
+    /*En cada iteracción, el método .charAt() nos devolverá el carácter de la posición que estamos recorriendo. Así 
+    que comprobaremos si dicho carácter es una de las vocales (a, e, i, o, u).*/
+ }   
+    document.write(`la palabra: ${frase} contiene: ${cont} vocales`);
+    
+
 //16- Realiza un script que pida una cadena de texto y la devuelva al revés. Es decir, si tecleo “hola que tal” deberá mostrar “lat euq aloh”.
 
+
+let palabras = prompt("ingrese una frase");
+let car = ("");
+let salida = ("");
+for (let index = 0; index < palabras.length; index++) {
+    
+    car = palabras.charAt(index)
+    
+    salida = car + salida;
+}
+document.write(salida);
 //17- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado.
 
