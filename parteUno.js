@@ -131,3 +131,16 @@ for (i = 0; i < frase.length; i++) {
     }
 }
 document.write("la letra" + letra +"se repite" + cont + "veces");
+
+////
+
+let numIng = prompt("Ingrese");
+suma = 0;
+for (i = 0; i < numIng; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {
+     suma = suma + i;   
+    }
+    
+   
+  console.log("el resultado es ;" + suma);  
+}
