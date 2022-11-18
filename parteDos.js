@@ -51,7 +51,7 @@ do {
         resultado = resultado + cadena;
         
     }else{
-        resultado = resultado + "-" + cadena
+           resultado = resultado + "-" + cadena
     }
 } while (confirm('desea seguir'));
 document.write(resultado);
@@ -225,6 +225,7 @@ if (numRep >= 0 && numRep <=50) {
     alert("El número introducido no es válido");
 }
 
+
 //8- Crea script para generar pirámide siguiente con los números del 1 al número que indique el usuario (no mayor de 50) 
 /*
 1
@@ -392,5 +393,32 @@ for (let index = 0; index < palabras.length; index++) {
     salida = car + salida;
 }
 document.write(salida);
+    //otra manera de invertir pero con function
+
+function invertirFrase(frase){
+return String(frase.toString().split('').reverse().join(''))
+}
+let palabra = prompt("ingrese una palabra");
+document.write(invertirFrase(palabra));
+
+
 //17- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado.
 
+let textos = prompt("ingrese la frase");
+let vocales = ["a", "e", "i", "o", "u"];
+let parar = false;
+let posicion = 0;
+
+for (let i = 0; i < textos.length; i++) {
+  for (let x = 0; x < vocales.length; x++) {
+    if (vocales[x] == textos.charAt(i)) {
+      posicion = i;
+      parar = true;
+      break;
+    }
+  }
+  if (parar) {
+    break;
+  }
+}
+document.write("La primera vocal está en la posición " + posicion);
